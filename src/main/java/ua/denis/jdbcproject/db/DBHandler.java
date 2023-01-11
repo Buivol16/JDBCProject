@@ -44,14 +44,19 @@ public class DBHandler {
     public void saveEntity(Object ob){
         Transaction transaction = openSession().beginTransaction();
         if(ob instanceof Car) openSession().merge((Car) ob);
-        else if(ob instanceof ua.denis.jdbcproject.loginapp.session.model.Session) openSession().merge((ua.denis.jdbcproject.loginapp.session.model.Session) ob);
+        else if(ob instanceof ua.denis.jdbcproject.loginapp.session.model.Session) openSession().persist(ob);
         else if(ob instanceof User) openSession().merge((User) ob);
         transaction.commit();
         closeSession();
     }
     public void deleteEntity(Object ob){
         Transaction transaction = openSession().beginTransaction();
-        openSession().remove(ob);
+        try{
+            openSession().remove(ob);
+
+        }catch (Exception e){
+
+        }
         transaction.commit();
         closeSession();
     }

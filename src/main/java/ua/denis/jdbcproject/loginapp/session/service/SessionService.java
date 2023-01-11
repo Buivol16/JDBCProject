@@ -38,7 +38,8 @@ public class SessionService {
   }
 
   public void delete() {
-    SessionRepository.deleteBySessionKey(getSkByFile());
+    Session session = SessionRepository.getBySessionKey(getSkByFile());
+    SessionRepository.deleteSession(session);
     deleteFileSessionKey();
   }
 

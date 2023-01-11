@@ -3,9 +3,11 @@ package ua.denis.jdbcproject.loginapp.login.gui;
 import javax.swing.*;
 
 import ua.denis.jdbcproject.basicapp.gui.BasicApp;
+import ua.denis.jdbcproject.db.DBHandler;
 import ua.denis.jdbcproject.loginapp.common.LabelHandler;
 import ua.denis.jdbcproject.db.DbHelper;
 import ua.denis.jdbcproject.loginapp.registration.gui.RegisterDialog;
+import ua.denis.jdbcproject.loginapp.session.service.LoginService;
 import ua.denis.jdbcproject.loginapp.session.service.SessionService;
 import ua.denis.jdbcproject.loginapp.utils.ConstUtils;
 import ua.denis.jdbcproject.loginapp.utils.FieldValidation;
@@ -53,7 +55,7 @@ public class LogInWindow extends JFrame {
       LabelHandler.setError(passwordLabel, "Field is empty.");
     } else LabelHandler.resetError(passwordLabel);
     try {
-      if (DbHelper.getInstance().login(usernameField.getText(), passwordField.getText())) {
+      if (LoginService.login(usernameField.getText(), passwordField.getText())) {
         if (rememberMeCheckBox.isSelected()) {
           try {
             SessionService.getInstance().create(usernameField.getText());

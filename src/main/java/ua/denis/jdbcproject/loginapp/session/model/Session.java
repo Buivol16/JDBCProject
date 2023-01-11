@@ -11,6 +11,7 @@ import lombok.Setter;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import java.util.UUID;
 
 import static ua.denis.jdbcproject.loginapp.utils.DatabaseConstUtils.SessionColumnConsts.MINUTES_PLUS;
@@ -34,7 +35,7 @@ public class Session {
     this.sessionKey = UUID.randomUUID();
     this.userId = userId;
     this.expiredAt = Timestamp.from(
-        LocalDateTime.now().plusMinutes(MINUTES_PLUS).toInstant(ZoneOffset.of(ZoneOffset.systemDefault().getId())));
+        LocalDateTime.now().plusMinutes(MINUTES_PLUS).toInstant(ZoneOffset.UTC));
   }
 
 }
