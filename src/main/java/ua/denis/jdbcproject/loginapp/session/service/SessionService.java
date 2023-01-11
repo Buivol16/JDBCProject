@@ -1,6 +1,9 @@
 package ua.denis.jdbcproject.loginapp.session.service;
 
-import ua.denis.jdbcproject.loginapp.common.db.DbHelper;
+import ua.denis.jdbcproject.db.DBHandler;
+import ua.denis.jdbcproject.db.DbHelper;
+import ua.denis.jdbcproject.db.repository.SessionRepository;
+import ua.denis.jdbcproject.db.repository.UserRepository;
 import ua.denis.jdbcproject.loginapp.session.model.Session;
 
 import java.io.File;
@@ -25,22 +28,18 @@ public class SessionService {
   }
 
   public void create(String username) throws SQLException {
-    Session session = new Session(DbHelper.getInstance().getIdByUsername(username));
+    Session session = new Session(UserRepository.getUserByUsername(username).getId());
     try {
       createFileSessionKey(session);
     } catch (IOException e) {
       e.printStackTrace();
     }
-    DbHelper.getInstance().registerSession(session);
+    DBHandler.getInstance().saveEntity(session);
   }
 
   public void delete() {
-    try {
-      DbHelper.getInstance().deleteSession(getSkByFile());
-      deleteFileSessionKey();
-    } catch (SQLException exception) {
-      exception.printStackTrace();
-    }
+    SessionRepository.deleteBySessionKey(getSkByFile());
+    deleteFileSessionKey();
   }
 
   public String getSkByFile() {

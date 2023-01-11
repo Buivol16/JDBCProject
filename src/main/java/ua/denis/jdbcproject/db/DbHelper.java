@@ -1,9 +1,8 @@
-package ua.denis.jdbcproject.loginapp.common.db;
+package ua.denis.jdbcproject.db;
 
 import ua.denis.jdbcproject.loginapp.session.model.Session;
 import ua.denis.jdbcproject.loginapp.session.service.SessionService;
 
-import javax.xml.transform.Result;
 import java.sql.*;
 
 import static ua.denis.jdbcproject.loginapp.utils.DatabaseConstUtils.*;
@@ -16,9 +15,7 @@ public class DbHelper {
   private DbHelper() {}
 
   public static DbHelper getInstance() {
-    if (INSTANCE == null) {
-      INSTANCE = new DbHelper();
-    }
+    if (INSTANCE == null) INSTANCE = new DbHelper();
     return INSTANCE;
   }
 

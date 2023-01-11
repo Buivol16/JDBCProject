@@ -1,7 +1,9 @@
 package ua.denis.jdbcproject.loginapp.registration.service;
 
-import ua.denis.jdbcproject.loginapp.common.db.DbHelper;
+import ua.denis.jdbcproject.db.DBHandler;
+import ua.denis.jdbcproject.db.repository.UserRepository;
 import ua.denis.jdbcproject.loginapp.exception.OccupiedNameException;
+import ua.denis.jdbcproject.loginapp.session.model.User;
 
 import java.sql.SQLException;
 
@@ -15,7 +17,7 @@ public class RegistrationService {
     }
 
     public void perform(String username, String password) throws SQLException, OccupiedNameException {
-        if (DbHelper.getInstance().checkUser(username)) throw new OccupiedNameException("The name of user is exist.");
-        DbHelper.getInstance().registerUser(username, password);
+        if (UserRepository.getUserByUsername(username) != null) throw new OccupiedNameException("The name of user is exist.");
+        DBHandler.getInstance().saveEntity(User.builder().username(username).password(password).build());
     }
 }

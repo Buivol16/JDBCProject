@@ -1,7 +1,7 @@
 package ua.denis.jdbcproject.basicapp.services;
 
 import ua.denis.jdbcproject.basicapp.model.Car;
-import ua.denis.jdbcproject.loginapp.common.db.DbHelper;
+import ua.denis.jdbcproject.db.DbHelper;
 import ua.denis.jdbcproject.loginapp.session.service.SessionService;
 
 import java.sql.ResultSet;
@@ -46,7 +46,7 @@ public class CarService {
   }
 
   public List<Car> getByUserId() {
-    ResultSet rs = null;
+    ResultSet rs;
     List<Car> cars = null;
     try {
       rs =

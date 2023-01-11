@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.*;
-import ua.denis.jdbcproject.loginapp.common.db.DbHelper;
+import ua.denis.jdbcproject.db.DbHelper;
 
 import java.sql.SQLException;
 

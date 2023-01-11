@@ -3,7 +3,6 @@ package ua.denis.jdbcproject.basicapp.gui;
 import ua.denis.jdbcproject.basicapp.model.Car;
 import ua.denis.jdbcproject.basicapp.services.CarService;
 import ua.denis.jdbcproject.loginapp.common.LabelHandler;
-import ua.denis.jdbcproject.loginapp.common.db.DbHelper;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -11,7 +10,6 @@ import javax.swing.filechooser.FileSystemView;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 public class BasicApp extends JFrame {
   private int backPageIndex = 0;

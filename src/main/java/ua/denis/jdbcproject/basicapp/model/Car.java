@@ -24,4 +24,13 @@ public class Car {
         .append(bodyType)
         .toString();
   }
+  public enum Transmission{
+    AUTOMATIC, MANUAL
+  }
+  public enum BodyType{
+    COUPE, HATCHBACK, SEDAN, LIMOUSINE, MINIVAN, ROADSTER
+  }
+  public enum FuelType{
+    GASOLINE, DIESEL, BIODIESEL, PROPANE, ELECTRICITY, HYDROGEN, HYBRID
+  }
 }
