@@ -4,7 +4,11 @@ import ua.denis.jdbcproject.db.DBHandler;
 import ua.denis.jdbcproject.db.repository.CRUDRepository;
 import ua.denis.jdbcproject.loginapp.model.Session;
 
-public class SessionRepository implements CRUDRepository {
+import javax.inject.Singleton;
+
+@Singleton
+public class SessionRepository implements CRUDRepository<Session, Long> {
+
     public static Session getByUserId(Long userId){
         Session session = null;
         try{
