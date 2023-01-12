@@ -1,9 +1,10 @@
-package ua.denis.jdbcproject.db.repository;
+package ua.denis.jdbcproject.db.repository.impl;
 
 import ua.denis.jdbcproject.db.DBHandler;
-import ua.denis.jdbcproject.loginapp.session.model.Session;
+import ua.denis.jdbcproject.db.repository.CRUDRepository;
+import ua.denis.jdbcproject.loginapp.model.Session;
 
-public class SessionRepository {
+public class SessionRepository implements CRUDRepository {
     public static Session getByUserId(Long userId){
         Session session = null;
         try{

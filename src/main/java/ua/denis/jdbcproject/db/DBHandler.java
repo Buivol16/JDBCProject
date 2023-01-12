@@ -7,7 +7,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import ua.denis.jdbcproject.basicapp.model.Car;
-import ua.denis.jdbcproject.loginapp.session.model.User;
+import ua.denis.jdbcproject.loginapp.model.User;
 
 import java.util.List;
 
@@ -31,20 +31,18 @@ public class DBHandler {
         return ob;
     }
 
-    public Object getEntity(Object ob){
-        Object object = null;
-        if(ob instanceof Car) object = openSession().get(Car.class, ob);
-        else if(ob instanceof ua.denis.jdbcproject.loginapp.session.model.Session) object = openSession().get(ua.denis.jdbcproject.loginapp.session.model.Session.class, ob);
-        else if(ob instanceof User) object = openSession().get(User.class, ob);
-        openSession().getTransaction().commit();
+    public Object getEntity(Object id, Class aClass){
+        Transaction transaction = openSession().beginTransaction();
+        Object ob = openSession().get(aClass, id);
+        transaction.commit();
         closeSession();
-        return object;
+        return ob;
     }
 
     public void saveEntity(Object ob){
         Transaction transaction = openSession().beginTransaction();
         if(ob instanceof Car) openSession().merge((Car) ob);
-        else if(ob instanceof ua.denis.jdbcproject.loginapp.session.model.Session) openSession().persist(ob);
+        else if(ob instanceof ua.denis.jdbcproject.loginapp.model.Session) openSession().persist(ob);
         else if(ob instanceof User) openSession().merge((User) ob);
         transaction.commit();
         closeSession();

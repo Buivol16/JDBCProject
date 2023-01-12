@@ -3,12 +3,10 @@ package ua.denis.jdbcproject.loginapp.login.gui;
 import javax.swing.*;
 
 import ua.denis.jdbcproject.basicapp.gui.BasicApp;
-import ua.denis.jdbcproject.db.DBHandler;
 import ua.denis.jdbcproject.loginapp.common.LabelHandler;
-import ua.denis.jdbcproject.db.DbHelper;
 import ua.denis.jdbcproject.loginapp.registration.gui.RegisterDialog;
-import ua.denis.jdbcproject.loginapp.session.service.LoginService;
-import ua.denis.jdbcproject.loginapp.session.service.SessionService;
+import ua.denis.jdbcproject.loginapp.service.LoginService;
+import ua.denis.jdbcproject.loginapp.service.SessionService;
 import ua.denis.jdbcproject.loginapp.utils.ConstUtils;
 import ua.denis.jdbcproject.loginapp.utils.FieldValidation;
 

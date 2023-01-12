@@ -1,4 +1,4 @@
-package ua.denis.jdbcproject.loginapp.session.model;
+package ua.denis.jdbcproject.loginapp.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

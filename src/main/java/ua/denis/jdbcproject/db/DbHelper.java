@@ -1,7 +1,7 @@
 package ua.denis.jdbcproject.db;
 
-import ua.denis.jdbcproject.loginapp.session.model.Session;
-import ua.denis.jdbcproject.loginapp.session.service.SessionService;
+import ua.denis.jdbcproject.loginapp.model.Session;
+import ua.denis.jdbcproject.loginapp.service.SessionService;
 
 import java.sql.*;
 

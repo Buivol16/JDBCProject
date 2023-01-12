@@ -63,7 +63,13 @@
             <artifactId>hibernate-validator-cdi</artifactId>
             <version>8.0.0.Final</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.github.peichhorn</groupId>
+            <artifactId>lombok-pg</artifactId>
+            <version>0.11.3</version>
+            <classifier>runtime</classifier>
+            <scope>runtime</scope>
+        </dependency>
 
     </dependencies>
     <build>

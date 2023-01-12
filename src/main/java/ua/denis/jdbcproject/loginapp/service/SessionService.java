@@ -1,10 +1,10 @@
-package ua.denis.jdbcproject.loginapp.session.service;
+package ua.denis.jdbcproject.loginapp.service;
 
 import ua.denis.jdbcproject.db.DBHandler;
 import ua.denis.jdbcproject.db.DbHelper;
-import ua.denis.jdbcproject.db.repository.SessionRepository;
-import ua.denis.jdbcproject.db.repository.UserRepository;
-import ua.denis.jdbcproject.loginapp.session.model.Session;
+import ua.denis.jdbcproject.db.repository.impl.SessionRepository;
+import ua.denis.jdbcproject.db.repository.impl.UserRepository;
+import ua.denis.jdbcproject.loginapp.model.Session;
 
 import java.io.File;
 import java.io.FileNotFoundException;

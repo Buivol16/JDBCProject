@@ -2,7 +2,7 @@ package ua.denis.jdbcproject.basicapp.services;
 
 import ua.denis.jdbcproject.basicapp.model.Car;
 import ua.denis.jdbcproject.db.DbHelper;
-import ua.denis.jdbcproject.loginapp.session.service.SessionService;
+import ua.denis.jdbcproject.loginapp.service.SessionService;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -23,14 +23,15 @@
         </property>
 
         <property name = "hibernate.connection.password">
-            admin
+            Pornhubthebest2@8
         </property>
 
         <property name="hbm2ddl.auto">
             update
         </property>
 
-        <mapping class="ua.denis.jdbcproject.loginapp.session.model.User"/>
+        <mapping class="ua.denis.jdbcproject.loginapp.model.User"/>
+        <mapping class="ua.denis.jdbcproject.loginapp.model.Session"/>
 
     </session-factory>
 
