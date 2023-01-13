@@ -1,7 +1,7 @@
 package ua.denis.jdbcproject;
 
-import ua.denis.jdbcproject.db.DBHandler;
-import ua.denis.jdbcproject.loginapp.login.gui.LogInWindow;
+import ua.denis.jdbcproject.server.db.DBHandler;
+import ua.denis.jdbcproject.client.loginapp.login.gui.LogInWindow;
 
 
 public class Main {

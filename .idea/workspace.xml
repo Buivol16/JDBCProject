@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="809e60c0-c1b2-4355-b724-ce067e82f778" name="Changes" comment="Initial coommit need to add and test @Singleton">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_dagger_dagger_2_44_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/basicapp/gui/BasicApp.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/basicapp/gui/BasicApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/exception/BlankFieldException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/exception/TooManyCharactersException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/common/LabelHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/exception/OccupiedNameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/exception/SessionIsExpiredException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/exception/WrongFormatFieldException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/login/gui/LogInWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/login/gui/LogInWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/registration/gui/RegisterDialog.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/registration/gui/RegisterDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/utils/ConstUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/utils/DatabaseConstUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/utils/Md5Encoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/model/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/model/Session.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/service/IsCheckFields.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/service/IsCheckJLists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/service/impl/FieldValidatorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/service/impl/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/service/impl/RegistrationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/server/db/DBHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/server/db/model/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/server/db/model/Session.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/server/db/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/server/db/repository/CRUDRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/server/db/repository/impl/CarRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/server/db/repository/impl/SessionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/server/db/repository/impl/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/server/service/CarService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/server/service/SessionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/google-java-format.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBCProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDBCProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/annotations/Singleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/basicapp/gui/BasicApp.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/basicapp/gui/BasicApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/basicapp/model/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/basicapp/services/CarService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/db/DBHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/db/DbHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/db/repository/CRUDRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/db/repository/impl/SessionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/db/repository/impl/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/exception/TooManyCharactersException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/common/LabelHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/exception/EmptyFieldException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/exception/OccupiedNameException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/exception/SessionIsExpiredException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/exception/WrongFormatFieldException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/login/gui/LogInWindow.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/login/gui/LogInWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/model/Session.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/registration/gui/RegisterDialog.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/registration/gui/RegisterDialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/registration/service/RegistrationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/service/LoginService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/service/SessionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/utils/ConstUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/utils/DatabaseConstUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/utils/FieldValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/loginapp/utils/Md5Encoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+        <option name="usePluginRegistry" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2KBjX7UwMblrQTla9AZH3EObjsO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ua.denis.jdbcproject.Main" />
+      <module name="JDBCProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.denis.jdbcproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTests" type="JUnit" factoryName="JUnit">
+      <module name="JDBCProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="IntegrationTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.IntegrationTests" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\slavik\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="809e60c0-c1b2-4355-b724-ce067e82f778" name="Changes" comment="" />
+      <created>1673454908164</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673454908164</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial coommit need to add and test @Singleton">
+      <created>1673524629056</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673524629056</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.openjfx:javafx-base" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial coommit need to add and test @Singleton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial coommit need to add and test @Singleton" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/service/impl/RegistrationService.java</url>
+          <line>14</line>
+          <properties field="userRepository" class="ua.denis.jdbcproject.client.service.impl.RegistrationService" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/registration/gui/RegisterDialog.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/registration/gui/RegisterDialog.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/registration/gui/RegisterDialog.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/loginapp/registration/gui/RegisterDialog.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/service/impl/RegistrationService.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/service/impl/RegistrationService.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/service/impl/RegistrationService.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/denis/jdbcproject/client/service/impl/RegistrationService.java</url>
+          <line>16</line>
+          <properties class="ua.denis.jdbcproject.client.service.impl.RegistrationService" method="perform">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

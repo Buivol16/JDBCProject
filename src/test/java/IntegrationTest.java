@@ -1,18 +1,22 @@
-import org.junit.jupiter.api.*;
-import ua.denis.jdbcproject.db.DbHelper;
+import org.junit.jupiter.api.Test;
+import ua.denis.jdbcproject.server.db.model.User;
+import ua.denis.jdbcproject.server.db.repository.impl.UserRepository;
 
-import java.sql.SQLException;
+import javax.inject.Inject;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class IntegrationTest {
-
+    private String username = "RootUser";
+    private String password = "admin";
+    @Inject
+    private UserRepository userRepository;
     @Test
-    void shouldFindIdNumber4(){
-        try {
-            assertEquals(4l, DbHelper.getInstance().getIdByUsername("vladosik"));
-        } catch (SQLException exception) {
-            exception.printStackTrace();
-        }
+    void shouldCreateAndFindUser(){
+        User user = User.builder().username(username).password(password).build();
+        userRepository.saveEntity(user);
+        user = userRepository.findByUsername(username);
+        assert(user != null);
+        userRepository.deleteEntity(user);
     }
 }

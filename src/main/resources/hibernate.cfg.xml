@@ -30,8 +30,8 @@
             update
         </property>
 
-        <mapping class="ua.denis.jdbcproject.loginapp.model.User"/>
-        <mapping class="ua.denis.jdbcproject.loginapp.model.Session"/>
+        <mapping class="ua.denis.jdbcproject.server.db.model.User"/>
+        <mapping class="ua.denis.jdbcproject.server.db.model.Session"/>
 
     </session-factory>
 
