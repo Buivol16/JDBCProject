@@ -5,8 +5,6 @@ import ua.denis.jdbcproject.server.db.model.Session;
 import ua.denis.jdbcproject.server.db.repository.impl.SessionRepository;
 import ua.denis.jdbcproject.server.db.repository.impl.UserRepository;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -17,15 +15,19 @@ import java.util.Scanner;
 
 import static ua.denis.jdbcproject.client.loginapp.utils.ConstUtils.PATH_TO_KEY;
 
-@Singleton
+
 public class SessionService {
-    @Inject
-    private UserRepository userRepository;
-    @Inject
-    private SessionRepository sessionRepository;
+    private static SessionService INSTANCE = null;
+
+    private SessionService(){}
+
+    public static SessionService getInstance(){
+        if (INSTANCE == null) INSTANCE = new SessionService();
+        return INSTANCE;
+    }
 
     public void create(String username) {
-        Session session = new Session(userRepository.findByUsername(username).getId());
+        Session session = new Session(UserRepository.getInstance().findByUsername(username).getId());
         try {
             createFileSessionKey(session);
         } catch (IOException e) {
@@ -35,8 +37,8 @@ public class SessionService {
     }
 
     public void delete() {
-        Session session = sessionRepository.getBySessionKey(getSkByFile());
-        sessionRepository.deleteEntity(session);
+        Session session = SessionRepository.getInstance().getBySessionKey(getSkByFile());
+        SessionRepository.getInstance().deleteEntity(session);
         deleteFileSessionKey();
     }
 
@@ -57,7 +59,7 @@ public class SessionService {
     public boolean isExpired() {
         boolean result = false;
 
-        var session = sessionRepository.getBySessionKey(getSkByFile());
+        var session = SessionRepository.getInstance().getBySessionKey(getSkByFile());
         Timestamp dateNow = Timestamp.valueOf(LocalDateTime.now());
         return session.getExpiredAt().after(dateNow);
 

@@ -6,8 +6,6 @@ import ua.denis.jdbcproject.client.loginapp.exception.OccupiedNameException;
 import ua.denis.jdbcproject.client.service.impl.FieldValidatorService;
 import ua.denis.jdbcproject.client.service.impl.RegistrationService;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
 import javax.swing.*;
 
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
@@ -23,10 +21,8 @@ public class RegisterDialog extends JDialog {
     private JLabel passwordErrorLabel;
     private JLabel errorLabel;
 
-    @Inject
-    private RegistrationService registrationService;
-    @Inject
-    private FieldValidatorService fieldValidatorService;
+    private RegistrationService registrationService = RegistrationService.getInstance();
+    private FieldValidatorService fieldValidatorService = FieldValidatorService.getInstance();
 
     public RegisterDialog() {
         setModal(true);

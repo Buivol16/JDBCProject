@@ -12,8 +12,6 @@
             com.mysql.cj.jdbc.Driver
         </property>
 
-        <!-- Assume test is the database name -->
-
         <property name = "hibernate.connection.url">
             jdbc:mysql://localhost/denisschema
         </property>
@@ -23,17 +21,13 @@
         </property>
 
         <property name = "hibernate.connection.password">
-            Pornhubthebest2@8
+            admin
         </property>
 
         <property name="hbm2ddl.auto">
             update
         </property>
-
         <mapping class="ua.denis.jdbcproject.server.db.model.User"/>
-        <mapping class="ua.denis.jdbcproject.server.db.model.Session"/>
-
     </session-factory>
-
 </hibernate-configuration>
 

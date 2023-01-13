@@ -1,5 +1,6 @@
 package ua.denis.jdbcproject.server.db;
 
+import jakarta.persistence.EntityManager;
 import jakarta.persistence.criteria.CriteriaQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import ua.denis.jdbcproject.server.db.model.User;
 
 import java.util.List;
 
@@ -14,10 +16,12 @@ public class DBHandler {
 
     private SessionFactory sessionFactory = null;
     private Session session = null;
+    private EntityManager entityManager = null;
 
     private static DBHandler INSTANCE = null;
     private DBHandler(){
         setUp();
+        entityManager = sessionFactory.createEntityManager();
     }
     public static DBHandler getInstance(){
         if (INSTANCE == null) INSTANCE = new DBHandler();
@@ -25,7 +29,7 @@ public class DBHandler {
     }
 
     public List getByQueryWithOneParameter(String query, Class aClass, Object parameter){
-        List ob = openSession().createQuery(query, aClass).setParameter("first", parameter).list();
+        List ob = entityManager.createQuery(query).setParameter("first", parameter).getResultList();
         closeSession();
         return ob;
     }
@@ -36,33 +40,25 @@ public class DBHandler {
         return ob;
     }
 
-    public Object getEntity(Object id, Class aClass){
-        Transaction transaction = openSession().beginTransaction();
-        Object ob = openSession().get(aClass, id);
-        transaction.commit();
-        closeSession();
-        return ob;
+    public Object getEntity(Object entity){
+        entityManager.getTransaction().begin();
+        entity = entityManager.merge(entity);
+        entityManager.getTransaction().commit();
+        return entity;
     }
 
     public void saveEntity(Object ob){
-        Transaction transaction = openSession().beginTransaction();
-
-        transaction.commit();
-        closeSession();
+        entityManager.getTransaction().begin();
+        entityManager.persist(ob);
+        entityManager.getTransaction().commit();
     }
     public void deleteEntity(Object ob){
-        Transaction transaction = openSession().beginTransaction();
-        try{
-            openSession().remove(ob);
-
-        }catch (Exception e){
-
-        }
-        transaction.commit();
-        closeSession();
+        entityManager.getTransaction().begin();
+        entityManager.remove(ob);
+        entityManager.getTransaction().commit();
     }
 
-    private Session openSession(){
+    public Session openSession(){
         try{
             session = sessionFactory.getCurrentSession();
         }catch(Exception e){
@@ -73,7 +69,7 @@ public class DBHandler {
         
     }
 
-    private void closeSession(){
+    public void closeSession(){
         session.close();
     }
 

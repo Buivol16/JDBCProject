@@ -5,10 +5,16 @@ import ua.denis.jdbcproject.server.db.DBHandler;
 import ua.denis.jdbcproject.server.db.model.User;
 import ua.denis.jdbcproject.server.db.repository.CRUDRepository;
 
-import javax.inject.Singleton;
 
-@Singleton
 public class UserRepository implements CRUDRepository<User, Long> {
+    private static UserRepository INSTANCE = null;
+
+    private UserRepository(){}
+
+    public static UserRepository getInstance(){
+        if (INSTANCE == null) INSTANCE = new UserRepository();
+        return INSTANCE;
+    }
 
     public User findByUsername(String username){
         User user = null;

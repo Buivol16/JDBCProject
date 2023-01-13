@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+    <persistence-unit name="ua.denis.jdbcproject.server.db.model.User">
+        <description>User class for table</description>
+        <class>ua.denis.jdbcproject.server.db.model.User</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    </persistence-unit>
+</persistence>

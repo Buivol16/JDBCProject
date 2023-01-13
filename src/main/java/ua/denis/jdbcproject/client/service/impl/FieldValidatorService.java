@@ -1,16 +1,22 @@
 package ua.denis.jdbcproject.client.service.impl;
 
-import lombok.NoArgsConstructor;
 import ua.denis.jdbcproject.client.exception.BlankFieldException;
 import ua.denis.jdbcproject.client.service.IsCheckFields;
 import ua.denis.jdbcproject.client.service.IsCheckJLists;
+import ua.denis.jdbcproject.server.db.repository.impl.UserRepository;
 
-import javax.inject.Singleton;
 import javax.swing.*;
-@Singleton
-@NoArgsConstructor
-public class FieldValidatorService implements IsCheckFields, IsCheckJLists {
 
+
+public class FieldValidatorService implements IsCheckFields, IsCheckJLists {
+    private static FieldValidatorService INSTANCE = null;
+
+    private FieldValidatorService(){}
+
+    public static FieldValidatorService getInstance(){
+        if (INSTANCE == null) INSTANCE = new FieldValidatorService();
+        return INSTANCE;
+    }
 
     @Override
     public void checkField(JTextField... textFields) throws BlankFieldException {

@@ -2,12 +2,16 @@ package ua.denis.jdbcproject.client.service.impl;
 
 import ua.denis.jdbcproject.server.db.repository.impl.UserRepository;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
-
-@Singleton
 public class LoginService {
-  @Inject
+
+  private static LoginService INSTANCE = null;
+
+  private LoginService(){}
+
+  public static LoginService getInstance(){
+    if (INSTANCE == null) INSTANCE = new LoginService();
+    return INSTANCE;
+  }
   private UserRepository userRepository;
   public boolean login(String username, String password) {
     var result = false;

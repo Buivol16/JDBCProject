@@ -45,7 +45,5 @@
     <orderEntry type="library" name="Maven: org.glassfish:jakarta.el:5.0.0-M1" level="project" />
     <orderEntry type="library" name="Maven: jakarta.el:jakarta.el-api:5.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator-cdi:8.0.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.google.dagger:dagger:2.44.2" level="project" />
-    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
   </component>
 </module>

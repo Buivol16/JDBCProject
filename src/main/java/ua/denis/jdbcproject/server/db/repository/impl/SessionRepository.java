@@ -1,13 +1,19 @@
 package ua.denis.jdbcproject.server.db.repository.impl;
 
 import ua.denis.jdbcproject.server.db.DBHandler;
-import ua.denis.jdbcproject.server.db.repository.CRUDRepository;
 import ua.denis.jdbcproject.server.db.model.Session;
+import ua.denis.jdbcproject.server.db.repository.CRUDRepository;
 
-import javax.inject.Singleton;
 
-@Singleton
 public class SessionRepository implements CRUDRepository<Session, Long> {
+    private static SessionRepository INSTANCE = null;
+
+    private SessionRepository(){}
+
+    public static SessionRepository getInstance(){
+        if (INSTANCE == null) INSTANCE = new SessionRepository();
+        return INSTANCE;
+    }
 
     public Session getByUserId(Long userId){
         Session session = null;

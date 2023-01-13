@@ -3,13 +3,12 @@ package ua.denis.jdbcproject.client.loginapp.login.gui;
 import ua.denis.jdbcproject.client.basicapp.gui.BasicApp;
 import ua.denis.jdbcproject.client.exception.BlankFieldException;
 import ua.denis.jdbcproject.client.loginapp.common.LabelHandler;
-import ua.denis.jdbcproject.client.loginapp.utils.ConstUtils;
 import ua.denis.jdbcproject.client.loginapp.registration.gui.RegisterDialog;
+import ua.denis.jdbcproject.client.loginapp.utils.ConstUtils;
 import ua.denis.jdbcproject.client.service.impl.FieldValidatorService;
 import ua.denis.jdbcproject.client.service.impl.LoginService;
 import ua.denis.jdbcproject.server.service.SessionService;
 
-import javax.inject.Inject;
 import javax.swing.*;
 import java.io.File;
 
@@ -24,14 +23,12 @@ public class LogInWindow extends JFrame {
   private JLabel usernameLabel;
   private JLabel errorLabel;
 
-  @Inject
-  private SessionService sessionService;
-  @Inject
-  private LoginService loginService;
-  @Inject
-  private FieldValidatorService fieldValidatorService;
+  private SessionService sessionService = SessionService.getInstance();
+  private LoginService loginService = LoginService.getInstance();
+  private FieldValidatorService fieldValidatorService = FieldValidatorService.getInstance();
   public LogInWindow() {
     setContentPane(mainPanel);
+
     if (!new File(ConstUtils.PATH_TO_KEY).exists()) {
       LabelHandler.resetError(errorLabel);
     }else if (sessionService.isExpired()) {

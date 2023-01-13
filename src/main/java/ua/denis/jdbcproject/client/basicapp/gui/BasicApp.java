@@ -3,13 +3,11 @@ package ua.denis.jdbcproject.client.basicapp.gui;
 import ua.denis.jdbcproject.client.exception.BlankFieldException;
 import ua.denis.jdbcproject.client.loginapp.common.LabelHandler;
 import ua.denis.jdbcproject.client.model.Car;
-import ua.denis.jdbcproject.client.model.Session;
 import ua.denis.jdbcproject.client.service.impl.FieldValidatorService;
 import ua.denis.jdbcproject.server.db.repository.impl.CarRepository;
 import ua.denis.jdbcproject.server.db.repository.impl.SessionRepository;
 import ua.denis.jdbcproject.server.service.SessionService;
 
-import javax.inject.Inject;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.filechooser.FileSystemView;
@@ -52,14 +50,12 @@ public class BasicApp extends JFrame {
   private FileNameExtensionFilter imageFilter =
       new FileNameExtensionFilter(
           "Image files", "tif, tiff, bmp, jpg, jpeg, png, raw, cr2, nef, orf, sr2");
-  @Inject
-  private CarRepository carRepository;
-  @Inject
-  private FieldValidatorService fieldHandlerService;
-  @Inject
-  private SessionRepository sessionRepository;
-  @Inject
-  private SessionService sessionService;
+
+  private CarRepository carRepository = CarRepository.getInstance();
+  private FieldValidatorService fieldHandlerService = FieldValidatorService.getInstance();
+  private SessionRepository sessionRepository = SessionRepository.getInstance();
+  private SessionService sessionService = SessionService.getInstance();
+
   private BasicApp() {
     setSize(1400, 1000);
     setTitle("Car rent app");
